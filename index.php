@@ -47,12 +47,58 @@
 <div class="container my-3">
     <h1 class="text-center">PHP CRUD operations using Bootstrap Modal</h1>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#completeModal">Add New user</button>
+
+    <div class="displayDataTable">ff
+</div>
 </div>
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    function displayData(){
+        var displayData = "true";
+        $.ajax({
+            url: "display.php",
+            type: 'post',
+            data:{
+                displaySend: displayData
+            },
+            success:function(data, status){
+
+            }
+        });
+    }
+
+
+
+    function addUser(){
+        var name = $('#completeName').val();
+        var email = $('#completeEmail').val();
+        var mobile = $('#completeMobile').val();
+        var place = $('#completePlace').val();
+
+        $.ajax({
+            url: "insert.php",
+            type: 'post',
+            data:{
+                nameSend:name,
+                emailSend:email,
+                mobileSend:mobile,
+                placeSend:place
+            },
+            success:function(data, status){
+                //function to display data.
+                //console.log(status);
+                displayData();
+            }
+        });
+
+    }
+</script>
 
 </body>
 </html>
