@@ -20,8 +20,20 @@
       </div>
       <div class="modal-body">
       <div class="form-group">
-        <label for="completename">Name</label>
-        <input type="email" class="form-control" id="completename" placeholder="Enter your name">
+        <label for="completeName">Name</label>
+        <input type="text" class="form-control" id="completeName" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="completeEmail">Email</label>
+        <input type="email" class="form-control" id="completeEmail" placeholder="Enter your email">
+    </div>
+    <div class="form-group">
+        <label for="completeMobile">Mobile</label>
+        <input type="text" class="form-control" id="completeMobile" placeholder="Enter your mobile">
+    </div>
+    <div class="form-group">
+        <label for="completePlace">Place</label>
+        <input type="email" class="form-control" id="completePlace" placeholder="Enter your place">
     </div>
       </div>
       <div class="modal-footer">
